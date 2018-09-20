@@ -1,0 +1,22 @@
+{
+  "name": "chartproject",
+  "version": "1.0.0",
+  "description": "Dynamic chart",
+  "main": "index.js",
+  "scripts": {
+    "test": "reactjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitpkhapekar/ChartProject.git"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "author": "Rohit Khapekar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohitpkhapekar/ChartProject/issues"
+  },
+  "homepage": "https://github.com/rohitpkhapekar/ChartProject#readme"
+}
