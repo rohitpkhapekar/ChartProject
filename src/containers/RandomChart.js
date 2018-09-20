@@ -1,5 +1,5 @@
 import React from 'react';
-import {Bar} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 import request from 'superagent';
 
 
@@ -21,6 +21,7 @@ class RandomChart extends React.Component {
         request.get(`https://www.random.org/integers/?num=${this.state.enteredNumber}&min=-100&max=1000&col=1&base=10&format=plain&rnd=new`).then(res =>
         {
            let x = res.text.replace(/\n/g, ",").split(',');
+            x.splice(-1,1);
             this.props.submitChartRequest(x)}
         );
     }
@@ -42,8 +43,8 @@ class RandomChart extends React.Component {
             labels: labelsData.reverse(),
             datasets: [{
                 label: "My First dataset",
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgb(255, 182, 193)',
+                borderColor: 'rgb(255, 22, 132)',
                 data: allNumbers,
             }]
         }
@@ -52,7 +53,7 @@ class RandomChart extends React.Component {
                 <h2>Enter an integer</h2>
                 <input type="number" min="-100" max="1000" onChange={this.inputNumber}/>
                 <button onClick={this.submitRequest}>LOAD</button>
-                < Bar data={data} />
+                < Line data={data} />
             </div>
         );
     }

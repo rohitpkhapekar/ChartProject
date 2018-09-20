@@ -4,7 +4,6 @@ import { getRandomNumbers} from '../actions'
 import RandomChart from './RandomChart';
 
 const mapStateToProps = (state) => ({
-  whatsUp: state.say,
   allNumbers:state.numbers,
   stateObject: state
 })
