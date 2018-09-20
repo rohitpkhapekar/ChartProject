@@ -1,3 +1,4 @@
+var path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -8,6 +9,12 @@ module.exports = {
         })
     ],
     devtool: 'inline-source-map',
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 7777,
+        historyApiFallback: true,
+    },
     module: {
         rules: [
             { test: /\.css$/, use:['style-loader', 'css-loader']},
